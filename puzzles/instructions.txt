@@ -1,0 +1,74 @@
+==== CHAPTER 1 ==== done
+
+1. Wyświetl zawartość pliku `input_1.txt` w terminalu :)
+
+2. Usuń puste linie z tekstu i dopiero wtedy wyświetl tekst.
+
+
+==== CHAPTER 2 ==== done
+
+1. Wyświetl zawartość pliku `input_2.txt` w terminalu :)
+
+2. W tekście brakuje kropek na końcu każdej z linijek... Trzeba to naprawić. Umieść kropki na końcu każdej z linijek i dopiero wtedy wyświetl tekst.
+
+3. Fajnie byłoby mieć ponumerowane linijki. Zanim wyświetlisz tekst w terminalu, dodaj numer na poczatku każdej z linii (np. "1. Gain unprecedented pipeline visibility.").
+
+
+==== CHAPTER 3 ==== DONE
+
+1. Wyświetl zawartość pliku `input_3.txt` w terminalu :)
+
+2. Plik zawiera liczby oddzielone znakiem podkreślenia. Pozbądźmy się go :) Wyświetl wszystkie liczby w terminalu, jedna pod drugą (każdą w nowej linii).
+
+-- Przykład: ----------------
+
+4
+6
+2
+8
+...
+
+----------------------------
+
+3. Każdą z liczb zwiększ o jeden (dodaj 1 do liczby). Wyświetl liczby w ten sam sposób co w poprzednim punkcie.
+
+4. Zapisz wynikowy tekst w pliku `output_3.txt`. (podpowiedź: https://bit.ly/2lF0VKO.)
+
+
+==== CHAPTER 4 ==== DONE
+
+Plik `input_4.txt` zawiera fragment ksiązki. Jednak okazało się, że osoba przygotowująca plik pomyliła się i plik zawiera linijki zapisane w odwrotnej kolejności... Trzeba to naprawić.
+
+1. Wyświetl zawartość pliku w terminalu, tak aby kolejność linijek była poprawna (należy wyświetlić linijki w odwrotnej kolejności). (podpowiedź: https://bit.ly/2lCuVa9)
+
+2. Fajnie byłoby mieć ponumerowane linijki. Zanim wyświetlisz tekst w terminalu, dodaj numer na poczatku każdej z linii (np. "1. Kiedy pan Bilbo Baggins z Bag End oznajmił, że wkrótce zamierza dla uczczenia").
+
+3. Zapisz wynikowy tekst w pliku `output_4.txt`.
+
+
+==== CHAPTER 5 ==== DONE
+
+Plik `input_5.txt` zawiera listę imion.
+
+1. Napisz program, który przywita wszystkie osoby na ekranie terminala.
+
+-- Przykład: ----------------
+
+Cześć, Ada!
+Cześć, Adamina!
+Cześć, Adela!
+...
+
+----------------------------
+
+2. Zapisz wynikowy tekst w pliku `output_5.txt`.
+
+
+==== CHAPTER 6 ====
+
+Plik `input_6.txt` zawiera tekst zawierający dodawanie matematyczne.
+
+1. Napisz program, który oblicza wynik tego działania i zapisuje go do pliku `output_6.txt`. - done
+
+2. Zrób tak, aby ten program zadziałał również dla pliku `input_7.txt`. - nie umiem tego ogarnąć 
+3. Plik `input_8.txt` zawiera przypadkowo dodane niepotrzebny znaki: #, w różnych miejsach. Należy go ignorować. Zrób tak, aby program zadziałał również dla pliku `input_8.txt` (wynik powinien być ten sam). - rozumiem, ze tutaj też powinny się zrobić obliczenia dla tego pliku, żeby się dodały, tego nie mam :( 

@@ -1,0 +1,11 @@
+ENVIRONMENT=sandbox bundle exec bin/mrhandy.rb -c iza-test-fux -e  '{ "#{Time.now.to_i}#{rand(100)}_tourtest@getbase.com" }'
+
+'{"extra_field":{"important_key":"value"}}'
+
+ '{ "#{Time.now.to_i}#{rand(100)}_tourtest@getbase.com" }'
+
+
+ ENVIRONMENT=sandbox bundle exec bin/mrhandy.rb -a - p starter -e '{ signup_email = "Time.now.to_i.to_s + domain + MrHandy.generate_fixture('number').to_s + ".com" }'
+
+
+ Time.now.to_i.to_s + domain + MrHandy.generate_fixture('number').to_s + ".com"
