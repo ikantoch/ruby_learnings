@@ -73,8 +73,31 @@ def add_czesc(chapter5)
 	end
 end
 
+def puzzle_6
+	chapter6 = File.read('input_6.txt')
+	ch1 = convert_to_number(chapter6)
+	calculate(ch1)
+	File.write('output_6.txt', sum)
+end
+
+def convert_to_number(chapter6)
+	ch1 = chapter6.split("+")
+	ch1.map do |number|
+		number.to_i
+	end
+end
+
+def calculate(ch1)
+	sum = 0
+	ch1.map do | n |
+		sum = sum + n
+	end
+	puts sum
+end
+
 puzzle_1
 puzzle_2
 puzzle_3
 puzzle_4
 puzzle_5
+puzzle_6
