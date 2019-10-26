@@ -75,12 +75,12 @@ end
 
 def puzzle_6
 	chapter6 = File.read('input_6.txt')
-	ch1 = convert_to_number(chapter6)
+	ch1 = convert_to_intiger(chapter6)
 	calculate(ch1)
 	File.write('output_6.txt', sum)
 end
 
-def convert_to_number(chapter6)
+def convert_to_intiger(chapter6)
 	ch1 = chapter6.split("+")
 	ch1.map do |number|
 		number.to_i
@@ -95,9 +95,21 @@ def calculate(ch1)
 	puts sum
 end
 
+def puzzle_7
+	chapter6 = File.read('input_8.txt')
+	ch1 = deletes_hash(chapter6)
+	ch2 = convert_to_intiger(ch1)
+	print ch2
+end
+
+def deletes_hash(chapter6)
+	chapter6.delete "#"
+end
+
 puzzle_1
 puzzle_2
 puzzle_3
 puzzle_4
 puzzle_5
 puzzle_6
+puzzle_7
