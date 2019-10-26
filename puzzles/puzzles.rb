@@ -47,15 +47,34 @@ end
 def puzzle_4
 	chapter4 = File.read('input_4.txt')
 	ch2 = reverse(chapter4)
-	ch2.add_line_numbers(chapter4)
+	ch3 = add_line_numbers(ch2)
+	print ch3
+	File.write('output_4.txt', ch3)
 end
 
 def reverse(chapter4)
 	ch1 = chapter4.split("\n")
 	ch1.reverse
+	ch1.join("\n")
 end
 
-puzzle_1
-puzzle_2
-puzzle_3
-puzzle_4
+def puzzle_5
+	chapter5 = File.read('input_5.txt')
+	ch2 = add_czesc(chapter5)
+	ch3  = ch2.join("\n")
+	print ch3
+	File.write('output_5.txt', ch2)
+end
+
+def add_czesc(chapter5)
+	ch1 =  chapter5.split("\n")
+	ch1.map do |name|
+		"Cześć, #{name}!"
+	end
+end
+
+# puzzle_1
+# puzzle_2
+# puzzle_3
+# puzzle_4
+puzzle_5
