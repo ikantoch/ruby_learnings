@@ -73,8 +73,8 @@ def add_czesc(chapter5)
 	end
 end
 
-# puzzle_1
-# puzzle_2
-# puzzle_3
-# puzzle_4
+puzzle_1
+puzzle_2
+puzzle_3
+puzzle_4
 puzzle_5
