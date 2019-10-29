@@ -76,8 +76,8 @@ end
 def puzzle_6
 	chapter6 = File.read('input_6.txt')
 	ch1 = convert_to_intiger(chapter6)
-	calculate(ch1)
-	File.write('output_6.txt', sum)
+	ch2 = calculate(ch1)
+	File.write('output_6.txt', ch2)
 end
 
 def convert_to_intiger(chapter6)
@@ -93,6 +93,7 @@ def calculate(ch1)
 		sum = sum + n
 	end
 	puts sum
+	sum
 end
 
 def puzzle_7
