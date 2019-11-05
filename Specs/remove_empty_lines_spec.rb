@@ -9,7 +9,6 @@ RSpec.describe "remove_empty_lines" do
   it "removes double new lines" do
     text = "Hej\n\nCo tam?\n\nWszystko ok!"
     result = remove_empty_lines(text)
-
     expect(result).to eq("Hej\nCo tam?\nWszystko ok!")
   end
 end
