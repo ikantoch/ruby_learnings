@@ -16,4 +16,4 @@ end
 # 1. dokończyć pisanie testów dla pozostałych metod
 # 2. Pamiętaj żeby nazwy metod odpowiadały temu co one robią
 # 3. Napisać testy kalkulatora
-# 4. Przeczytać jeszcze raz doc lesson.txt z nowymi rzeczami
+# 4. Przeczytać jeszcze raz doc lesseon.txt z nowymi rzeczami
