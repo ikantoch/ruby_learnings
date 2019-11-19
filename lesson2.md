@@ -75,12 +75,33 @@ end
 
 ```
 def reverse_lines(text)
-	text.split("\n").reverse.join("\n")
+  text.split("\n").reverse.join("\n")
 end
 ```
 
+---
+
+Zadaniem metody może być wykonanie jakiejś operacji (np.: `send_email(text)`).
+
+Zawsze metoda będzie zwracała jakąś wartość (może to być również `nil`). Czasem jest to ważne, a czasem nieistotne (bo metoda wysyła maila i nie interesuje nas co ona zwróci).
+
+Ale zawsze jakaś wartość jest zwracana (domyślnie jest to wartość, którą zwraca ostatnie wyrażenie w metodzie):
+
 ```
-def send_email(text)
-  # wysyłanie maila
+def przykladowa metoda
+  1
+  2
+  3
+  4
+  5
 end
+```
+
+Co zwróci ta metoda?
+
+Odpowiedź: liczbę 5.
+
+```
+irb> przykladowa_metoda
+=> 5
 ```
