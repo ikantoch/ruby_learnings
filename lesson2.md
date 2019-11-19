@@ -1,0 +1,86 @@
+## Metody
+
+### Wywoływanie metod
+
+Przykłady:
+
+```
+irb> nazwa_metody
+=> "wynik wywołania metody"
+
+irb> nazwa_metody(argument_1)
+=> "wynik wywołania metody"
+
+irb> nazwa_metody(argument_1, argument_2)
+=> "wynik wywołania metody"
+
+irb> dodaj(1, 2)
+=> 3
+```
+
+#### Metody zdefiniowane "globalnie" (na razie tak to nazwijmy :))
+
+```
+irb> puts "Hej ho!"
+=> nil
+```
+
+```
+irb> sleep 1
+=> 1
+```
+
+#### Metody zdefiniowane "na danym typie obiektu"
+
+```
+irb> tekst = "to jest przykladowy string"
+=> "to jest przykladowy string"
+irb> tekst.reverse
+=> "gnirts ywodalkyzrp tsej ot"
+```
+
+```
+irb> liczba = 100
+=> 100
+irb> liczba.even?
+=> true
+```
+
+Jak widac wyżej `Integer` ma zdefiniowaną metodę `even?`. Ale za to `String` już nie:
+
+```
+irb(main):008:0> tekst = "to jest przykladowy string"
+=> "to jest przykladowy string"
+irb(main):010:0> tekst.even?
+NoMethodError (undefined method `even?' for "to jest przykladowy string":String)
+```
+
+### Definiowane własnych "globalnych" (patrz wyżej) metod
+
+Definicja metody o nazwie `nazwa_metody`, bez argumentów, zwracająca liczbę `15`:
+
+```
+def nazwa_metody
+  15
+end
+```
+
+Więcej przykładów:
+
+```
+def dodaj(a, b)
+  a + b
+end
+```
+
+```
+def reverse_lines(text)
+	text.split("\n").reverse.join("\n")
+end
+```
+
+```
+def send_email(text)
+  # wysyłanie maila
+end
+```
