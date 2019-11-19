@@ -1,11 +1,15 @@
+## Wyrażenie: zawraca wartość & wykonuje operację
+
 Wyrażenie w Ruby:
+
 * zwraca jakąś wartość,
 * może wykonywać jakąś operację (obliczenie, wyświetlanie tekstu, modyfikacja zmiennej, wysyłanie maila, etc.).
 
 ---
 
+#### Wyrażenie w Ruby zwraca jakąś wartość
 
-Wyrażenie w Ruby zwraca jakąś wartość - przykłady:
+Przykłady:
 
 ```
 irb> 5
@@ -23,6 +27,7 @@ irb> [1, 2, 3] + [4, 5]
 
 ---
 
+#### Wyrażenie w Ruby może wykonywać jakąś operację
 
 Wyrażenie DODATKOWO może wykonywać jakąś operację. Przykładowo, puts wyświetla tekst.
 Nadal jednak puts zwraca jakąś wartość - w przypadku puts zawsze jest to nil:
@@ -49,6 +54,8 @@ lub kod źródłowy tych metod.
 
 ---
 
+
+## Przypisanie
 
 Wynik wyrażenia można przypisać do zmiennej.
 
@@ -97,7 +104,7 @@ irb> zmienna
 ---
 
 
-Kiedy wynik wyrażenia przypisujemy do zmiennej?
+#### Kiedy wynik wyrażenia przypisujemy do zmiennej?
 
 Wtedy gdy potrzebujemy go potem użyć (np. w jednym z kolejnych wyrażeń):
 
@@ -112,7 +119,7 @@ irb> joined_text + "=6"
 ---
 
 
-Niektóre metody mutują zmienną.
+## Niektóre metody mutują zmienną.
 
 Przykładowo, metoda `delete` wywołana na tablicy, wykonuje operację (mutuje zmienną) oraz zawraca wartość (ostatni
 usunięty element):
