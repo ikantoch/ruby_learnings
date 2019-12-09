@@ -8,7 +8,7 @@ def class_register
 end
 
 def get_student_record_by_id(id)
-  # Can you make the test pass by modifying this method only?
+
 end
 
 RSpec.describe "class register - approach 1" do

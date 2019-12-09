@@ -1,3 +1,5 @@
+require 'pry'
+
 def class_register
   {
     1 => {
@@ -19,7 +21,8 @@ def class_register
 end
 
 def get_student_record_by_id(id)
-  # Can you make the test pass by modifying this method only?
+  class_register[id]
+    "#{id}. #{class_register[id][:name]} #{class_register[id][:surname]}, #{class_register[id][:city]}"
 end
 
 RSpec.describe "class register - approach 2" do
