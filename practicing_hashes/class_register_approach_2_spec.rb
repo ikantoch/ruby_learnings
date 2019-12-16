@@ -15,14 +15,16 @@ def class_register
     3 => {
       name: "Celina",
       surname: "C",
-      city: "Gdynia"
     }
   }
 end
 
+
 def get_student_record_by_id(id)
-  class_register[id]
-    "#{id}. #{class_register[id][:name]} #{class_register[id][:surname]}, #{class_register[id][:city]}"
+  student = class_register[id]
+  "#{id}. #{student.fetch(:name)} #{student.fetch(:surname)}, #{student.fetch(:city, '-')}"
+  # alternatywna opcja
+  # "#{id}. #{class_register.dig(id, :name)} #{class_register.dig(id, :surname)}, #{class_register.dig(id, :city)}"
 end
 
 RSpec.describe "class register - approach 2" do

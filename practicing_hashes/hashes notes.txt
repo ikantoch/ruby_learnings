@@ -34,5 +34,11 @@ user.fetch(:id) => 1
 user.fetch(:address).fetch(:city) => {city: "Krakow", street: nil}
 user.fetch(:dupa) => ERROR
 
-user.fetch(:addres, 0) => 1
+user.fetch(:address, 0) => {city: "Krakow", street: nil}
 user.fetch(:pesel, 0) => 0
+
+
+####
+student[:name]
+student.fetch(:name)
+student.dig(:name)
