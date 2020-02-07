@@ -15,6 +15,6 @@ teams = {
 teams.each do |team, employees|
 	puts team
 	employees.each do |seat, person|
-		p "#{:person} is on the #{:seat}"
+		p "#{[:person]} is on the #{[:seat]}"
 	end	
 end
