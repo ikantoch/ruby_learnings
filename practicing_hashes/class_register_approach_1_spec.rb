@@ -8,7 +8,12 @@ def class_register
 end
 
 def get_student_record_by_id(id)
-  # Can you make the test pass by modifying this method only?
+  index = id - 1
+  name = class_register[:names][index]
+  surname = class_register[:surnames][index]
+  city = class_register[:cities][index]
+
+  "#{id}. #{name} #{surname}, #{city}"
 end
 
 RSpec.describe "class register - approach 1" do

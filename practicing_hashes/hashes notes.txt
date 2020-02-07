@@ -1,0 +1,44 @@
+user = {
+	:id => 1,
+	:address => {
+		:city => "Krakow",
+		:street => nil,
+	}
+	12 => "sdfd",
+}
+
+user = {
+	1 => 1,
+	2 => {
+		:city => "Krakow",
+		:street => nil,
+	}
+	3 => "sdfd",
+}
+
+user[2]
+
+user[:id] => 1
+user[:address] => {city: "Krakow", street: nil}
+user[:address][:city] => "Krakow"
+user[:address][:dupa] => nil
+user[:dupa] => nil
+user[:dupa][:dupa] => ERROR
+
+user.dig(:address, :city) => "Krakow"
+user.dig(:address, :dupa) => nil
+user.dig(:dupa) => nil
+user.dig(:dupa, :dupa) => nil
+
+user.fetch(:id) => 1
+user.fetch(:address).fetch(:city) => {city: "Krakow", street: nil}
+user.fetch(:dupa) => ERROR
+
+user.fetch(:address, 0) => {city: "Krakow", street: nil}
+user.fetch(:pesel, 0) => 0
+
+
+####
+student[:name]
+student.fetch(:name)
+student.dig(:name)

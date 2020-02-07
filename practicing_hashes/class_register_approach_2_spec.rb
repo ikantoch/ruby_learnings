@@ -1,3 +1,5 @@
+require 'pry'
+
 def class_register
   {
     1 => {
@@ -13,13 +15,16 @@ def class_register
     3 => {
       name: "Celina",
       surname: "C",
-      city: "Gdynia"
     }
   }
 end
 
+
 def get_student_record_by_id(id)
-  # Can you make the test pass by modifying this method only?
+  student = class_register[id]
+  "#{id}. #{student.fetch(:name)} #{student.fetch(:surname)}, #{student.fetch(:city, '-')}"
+  # alternatywna opcja
+  # "#{id}. #{class_register.dig(id, :name)} #{class_register.dig(id, :surname)}, #{class_register.dig(id, :city)}"
 end
 
 RSpec.describe "class register - approach 2" do
