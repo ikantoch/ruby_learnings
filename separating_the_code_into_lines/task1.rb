@@ -48,8 +48,8 @@ end
 RSpec.describe do
   it 'reverses and formats the text (adds line numbers, etc.)' do
     name_of_the_file_with_the_text = 'text.txt'
-    formated_text = reverse_and_format_text(name_of_the_file_with_the_text)
+    formatted_text = reverse_and_format_text(name_of_the_file_with_the_text)
 
-    expect(formated_text).to eq("1. Vestibulum felis dolor.\n\n2. Sed efficitur justo.\n\n3. Vestibulum a facilisis metus.\n\n4. Interdum et malesuada fames.\n\n5. Lorem ipsum dolor sit amet.")
+    expect(formatted_text).to eq("1. Vestibulum felis dolor.\n\n2. Sed efficitur justo.\n\n3. Vestibulum a facilisis metus.\n\n4. Interdum et malesuada fames.\n\n5. Lorem ipsum dolor sit amet.")
   end
 end
