@@ -17,7 +17,7 @@ describe "Basic Tests" do
 end
 
 #what did I learned
-# it is possible to cut number using floor metjod
+# it is possible to cut number using floor method
 # number = -16.7834
 # n = number.floor
 # n = 16
