@@ -17,7 +17,13 @@
 # Format the code:
 
 def reverse_and_format_text(filename)
-  add_line_numbers(reverse_lines(File.read(filename)).split("\n\n").join("\n")).split("\n").join("\n\n")
+  text = File.read(filename)
+  text = reverse_lines(text)
+  text = text.squeeze("\n")
+  text = add_line_numbers(text)
+  text.split("\n").join("\n\n")
+  # add_line_numbers(reverse_lines(File.read(filename)).split("\n\n").join("\n"))
+    # .split("\n").join("\n\n")
 end
 
 # Do not change:
@@ -41,6 +47,8 @@ def add_line_numbers(text)
 
   lines.join("\n")
 end
+
+p reverse_and_format_text('text.txt')
 
 # You can run the test:
 # $ rspec task1.rb
