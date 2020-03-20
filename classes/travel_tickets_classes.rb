@@ -1,14 +1,14 @@
 require './ticket_processor_class.rb'
 
 class TrainTricket
-  def initialize(ditection, ticket_cost, departure_time)
-    @ditection = ditection
+  def initialize(direction, ticket_cost, departure_time)
+    @direction = direction
     @ticket_cost = ticket_cost
     @departure_time = departure_time
   end
 
   def send_by_email(to)
-    subject = "Your train ticket to #{@ditectio}"
+    subject = "Your train ticket to #{@direction}"
     from = 'no_reply@railway.com'
     message = 'Enjoy your trip with us'
     EmailClient.new.send_email(from, to, subject, message)
