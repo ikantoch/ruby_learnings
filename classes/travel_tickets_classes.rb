@@ -1,3 +1,5 @@
+require './ticket_processor_class.rb'
+
 class TrainTricket
   def initialize(ditection, ticket_cost, departure_time)
     @ditection = ditection
@@ -12,3 +14,6 @@ class TrainTricket
     EmailClient.new.send_email(from, to, subject, message)
   end
 end
+
+train_ticket = TrainTricket.new("wawa", 20, "18:00")
+train_ticket.send_by_email("ikantoch@zendesk.com")
