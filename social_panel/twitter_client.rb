@@ -10,8 +10,8 @@ class TwitterClient
   URL = 'https://api.twitter.com/1.1'
 
   def get_tweet_by_id(tweet_id)
-    response = Faraday.get("#{URL}/statuses/show.json?id=#{tweet_id}") do |req|
-      req.headers['Authorization'] = "Bearer #{ENV['SOCIAL_PANEL_TWITTER_ACCESS_TOKEN']}"
+    response = Faraday.get("#{URL}/statuses/show.json?id=#{tweet_id}") do |request|
+      request.headers['Authorization'] = "Bearer #{ENV['SOCIAL_PANEL_TWITTER_ACCESS_TOKEN']}"
     end
     p response
   end
