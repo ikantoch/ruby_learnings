@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative './/twitter_client.rb'
+require_relative '../lib/twitter_client.rb'
 
 RSpec.describe 'twitter_client_spec' do
   it 'finds twitter by id' do
