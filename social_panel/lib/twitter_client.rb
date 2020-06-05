@@ -28,8 +28,8 @@ class TwitterClient
   end
 end
 
-tweet = TwitterClient.new.get_tweet_by_id(1247104664144936960)
-p tweet
+# tweet = TwitterClient.new.get_tweet_by_id(1247104664144936960)
+# p tweet
 
 # TwitterClient.new.get_tweet_by_id('1247104664144936960')
 
