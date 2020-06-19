@@ -26,8 +26,22 @@ class TwitterClient
     # parsed_body["text"]
     # in this approach I'm pulling only the value of key "text" in the response hash, it returns "My first twitter"
   end
+
+  # https://api.twitter.com/1.1/search/tweets.json?q=%22coronavirus%22%3A%29result_type=recent&count=3&lang=en
+  #
+  def search_tweets_by_phrase(query_phrase: "coronavirus", result_type: "recent", count: 3, lang: "en")
+    response =  Faraday.get("#{URL}/search/tweets.json?q=%22#{query_phrase}%22%3A%29#{result_type}&#{count}&#{lang}") do |request|
+      request.headers['Authorization'] = "Bearer #{ENV['SOCIAL_PANEL_TWITTER_ACCESS_TOKEN']}"
+    end
+
+    body = response.body
+    JSON.parse(body)
+  end
 end
 
+tweet = TwitterClient.new.search_tweets_by_phrase
+p tweet
+#
 # tweet = TwitterClient.new.get_tweet_by_id(1247104664144936960)
 # p tweet
 
