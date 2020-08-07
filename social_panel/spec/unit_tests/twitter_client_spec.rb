@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
-require_relative '../lib/twitter_client.rb'
-require '../spec/spec_helper'
+require './spec/spec_helper'
+require './lib/twitter_client.rb'
+
+WebMock.disable_net_connect!(allow_localhost: true)
 
 RSpec.describe 'twitter_client_spec' do
 
