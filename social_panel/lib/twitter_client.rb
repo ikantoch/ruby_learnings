@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-# require 'faraday'
-#
-# response = Faraday.get 'https://api.twitter.com/1.1/statuses/show.json', {id: 1247104664144936960}, {'Authorization' => "Bearer #{ENV['SOCIAL_PANEL_TWITTER_ACCESS_TOKEN']}"}
-# p response
-
 require 'faraday'
 require 'JSON'
 require 'pry'
@@ -19,22 +14,12 @@ class TwitterClient
 
     body = response.body
     JSON.parse(body)
-    # parsed_body = JSON.parse(body)
-    # parsed_body.select {|key, value| key == "text"}
-    # in this approach I select from the response hash the key and value where key is "text", it returns a new hash { "text" => "My first twitter*"}
-    #
-    # parsed_body["text"]
-    # in this approach I'm pulling only the value of key "text" in the response hash, it returns "My first twitter"
   end
 
-  # https://api.twitter.com/1.1/search/tweets.json?q=%22coronavirus%22%3A%29result_type=recent&count=3&lang=en
-  #
   def search_tweets_by_phrase(query_phrase:, result_type: "recent", count: 1, lang: "en", locale: "us")
     response =  Faraday.get("#{URL}/search/tweets.json?q=#{query_phrase}&#{result_type}&#{count}&#{lang}&#{locale}") do |request|
       request.headers['Authorization'] = "Bearer #{ENV.fetch('SOCIAL_PANEL_TWITTER_ACCESS_TOKEN')}"
     end
-
-    #add note about required argument here and types of argument with ":" and without
 
     body = response.body
     JSON.parse(body)
@@ -43,14 +28,3 @@ end
 
 tweet = TwitterClient.new.search_tweets_by_phrase(query_phrase: "Mozambik")
 p tweet
-
-
-# tweet = TwitterClient.new.get_tweet_by_id(1247104664144936960)
-# p tweet
-
-# TwitterClient.new.get_tweet_by_id('1247104664144936960')
-
- # This is my way to get my first tweet by using curl
- # curl --header "Authorization: Bearer $SOCIAL_PANEL_TWITTER_ACCESS_TOKEN" --request GET https://api.twitter.com/1.1/statuses/show.json?id=1247104664144936960
-#
-# currently search_tweets_by_phrase finds the tweet id not the tweet text
