@@ -6,8 +6,8 @@ WebMock.allow_net_connect!
 
 RSpec.describe 'finding tweet phrase' do
   it 'finds tweets by phrase' do
-    result = TwitterClient.new.search_tweets_by_phrase(query_phrase: 'Mozambik', count: 1, lang: "en", locale: "us")
-    expected_text = result["statuses"].first["text"]
-    expect(expected_text).to include('Mozambik')
+    result = TwitterClient.new.search_tweets_by_phrase(query_phrase: 'Devtesttweet852369')
+    expected_text = result['statuses'].first['text']
+    expect(expected_text).to include('Devtesttweet852369')
   end
 end
