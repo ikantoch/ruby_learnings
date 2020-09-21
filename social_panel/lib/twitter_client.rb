@@ -24,12 +24,14 @@ class TwitterClient
   end
 
   def search_tweets_by_phrase(query_phrase, result_type: "recent")
-    response =  connection.get("search/tweets.json?q=#{query_phrase}&#{result_type}")
+    response =  Faraday.get("#{URL}/search/tweets.json?q=#{query_phrase}&#{result_type}&#{count}&#{lang}&#{locale}") do |request|
+      request.headers['Authorization'] = ACCESS_TOKEN
+    end
 
     body = response.body
     JSON.parse(body)
   end
 end
 
-result = TwitterClient.new.get_tweet_by_id('1305411679468113920')
+result = TwitterClient.new.get_tweet_by_id('Devtesttweet852369')
 p result
